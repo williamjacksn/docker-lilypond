@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-ENV LILYPOND_VERSION="2.18.2"
+ENV LILYPOND_VERSION="2.18.2-12build1"
 
 RUN /usr/bin/apt-get update \
  && /usr/bin/apt-get dist-upgrade --assume-yes \
