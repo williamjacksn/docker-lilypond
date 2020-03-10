@@ -1,14 +1,16 @@
 FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND="noninteractive"
-
-ENV LILYPOND_VERSION="2.18.2-12build1"
+ARG LILYPOND_VERSION="2.20.0-1"
 
 RUN /usr/bin/apt-get update \
  && /usr/bin/apt-get dist-upgrade --assume-yes \
- && /usr/bin/apt-get install --assume-yes "lilypond=${LILYPOND_VERSION}" \
+ && /usr/bin/apt-get install --assume-yes curl \
+ && /usr/bin/curl --location --remote-name --url "http://lilypond.org/download/binaries/linux-64/lilypond-${LILYPOND_VERSION}.linux-64.sh" \
+ && /bin/sh "/lilypond-${LILYPOND_VERSION}.linux-64.sh" --batch \
+ && /usr/bin/apt-get purge --assume-yes curl \
  && /usr/bin/apt-get autoremove --assume-yes \
  && /usr/bin/apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/usr/bin/lilypond"]
+ENTRYPOINT ["/usr/local/bin/lilypond"]
