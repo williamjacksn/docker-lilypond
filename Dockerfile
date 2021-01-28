@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG LILYPOND_VERSION="2.20.0-1"
