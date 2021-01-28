@@ -1,6 +1,5 @@
-version: '3.7'
+version: '3.8'
 
 services:
   lilypond:
-    image: docker.pkg.github.com/williamjacksn/docker-lilypond/lilypond
-    build: .
+    image: ghcr.io/williamjacksn/lilypond
