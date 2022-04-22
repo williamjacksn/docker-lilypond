@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   lilypond:
     image: ghcr.io/williamjacksn/lilypond
