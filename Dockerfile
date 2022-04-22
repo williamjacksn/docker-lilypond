@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG LILYPOND_VERSION="2.22.0-1"
+ARG LILYPOND_VERSION="2.22.2-1"
 
 RUN /usr/bin/apt-get update \
  && /usr/bin/apt-get dist-upgrade --assume-yes \
