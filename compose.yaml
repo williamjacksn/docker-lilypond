@@ -1,3 +1,9 @@
 services:
-  lilypond:
+  shell:
+    build: .
+    entrypoint:
+      - /bin/bash
     image: ghcr.io/williamjacksn/lilypond
+    volumes:
+      - ./:/home/python/docker-lilypond
+    working_dir: /home/python/docker-lilypond
