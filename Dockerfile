@@ -19,6 +19,9 @@ RUN /usr/sbin/useradd --create-home --shell /bin/bash --user-group python
 USER python
 RUN /usr/local/bin/python -m venv /home/python/venv
 
+COPY requirements.txt /home/python/docker-lilypond/requirements.txt
+RUN /home/python/venv/bin/pip install --no-cache-dir --requirement /home/python/docker-lilypond/requirements.txt
+
 ENV PATH="/home/python/venv/bin:/lilypond/bin:${PATH}" \
     PYTHONDONTWRITEBYTECODE="1" \
     PYTHONUNBUFFERED="1" \
