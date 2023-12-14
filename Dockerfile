@@ -1,4 +1,4 @@
-FROM python:3.12.0-slim-bullseye
+FROM python:3.11.7-slim-bullseye
 
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG LILYPOND_VERSION="2.24.1"
