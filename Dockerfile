@@ -1,7 +1,7 @@
 FROM python:3.12.2-slim-bookworm
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG LILYPOND_VERSION="2.24.1"
+ARG LILYPOND_VERSION="2.24.3"
 
 RUN /usr/bin/apt-get update \
  && /usr/bin/apt-get dist-upgrade --assume-yes \
