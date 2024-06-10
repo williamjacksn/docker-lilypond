@@ -1,4 +1,4 @@
-FROM python:3.12.3-slim-bookworm
+FROM python:3.12.4-slim-bookworm
 
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG LILYPOND_VERSION="2.24.3"
