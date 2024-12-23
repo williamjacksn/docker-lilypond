@@ -3,7 +3,7 @@ FROM python:3.13-slim
 ARG DEBIAN_FRONTEND="noninteractive"
 
 # https://gitlab.com/lilypond/lilypond/-/releases
-ARG LILYPOND_VERSION="2.24.3"
+ARG LILYPOND_VERSION="2.24.4"
 
 RUN /usr/bin/apt-get update \
  && /usr/bin/apt-get dist-upgrade --assume-yes \
