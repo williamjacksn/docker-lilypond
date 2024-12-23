@@ -1,6 +1,8 @@
 FROM python:3.12-slim
 
 ARG DEBIAN_FRONTEND="noninteractive"
+
+# https://gitlab.com/lilypond/lilypond/-/releases
 ARG LILYPOND_VERSION="2.24.3"
 
 RUN /usr/bin/apt-get update \
